@@ -1,0 +1,14 @@
+.grid { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--color-line); }
+.grid a { display: grid; grid-template-columns: 30px 32px 1fr auto; min-height: 72px; align-items: center; gap: 10px; border-bottom: 1px solid var(--color-line); color: var(--color-ink); font-weight: 700; transition: padding 160ms ease, color 160ms ease; }
+.grid a:hover, .grid a:focus-visible { padding-inline: 10px; color: var(--color-accent); }
+.number { color: #aaa; font-size: 0.7rem; }
+.grid svg { width: 18px; height: 18px; }
+.grid .icon { width: 30px; height: 30px; object-fit: contain; }
+
+@media (min-width: 768px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .grid a:nth-child(odd) { padding-right: 24px; border-right: 1px solid var(--color-line); }
+  .grid a:nth-child(even) { padding-left: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) { .grid a { transition: none; } }

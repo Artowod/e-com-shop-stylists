@@ -1,0 +1,14 @@
+import { describe, expect, it } from "vitest";
+import { getReviewSummary } from "./reviewSummary";
+
+describe("review summary", () => {
+  it("uses only published reviews", () => {
+    const summary = getReviewSummary([
+      { id: "1", productId: "p", author: "A", rating: 5, text: "ok", date: "2026-01-01", status: "published" },
+      { id: "2", productId: "p", author: "B", rating: 1, text: "pending", date: "2026-01-02", status: "pending" },
+    ]);
+    expect(summary.average).toBe(5);
+    expect(summary.count).toBe(1);
+    expect(summary.distribution[5]).toBe(1);
+  });
+});

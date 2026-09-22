@@ -1,0 +1,16 @@
+.carousel { position: relative; }
+.viewport { overflow: hidden; }
+.track { display: flex; margin-left: -12px; padding: 4px 2px 18px; touch-action: pan-y pinch-zoom; }
+.slide { min-width: 0; padding-left: 12px; }
+.slide > * { height: 100%; }
+.brand { flex: 0 0 145px; }
+.product { flex: 0 0 min(76vw, 245px); }
+.wide { flex: 0 0 min(86vw, 360px); }
+.square { flex: 0 0 min(68vw, 230px); }
+.editorial { flex: 0 0 min(86vw, 370px); }
+.arrow { position: absolute; top: 50%; z-index: 2; display: none; width: 44px; height: 44px; place-items: center; border: 1px solid var(--color-line); border-radius: 50%; color: var(--color-ink); background: #fff; box-shadow: 0 7px 22px rgb(0 0 0 / 10%); transform: translateY(-50%); }
+.arrow svg { width: 20px; height: 20px; }
+.previous { left: -20px; }
+.next { right: -20px; }
+@media (min-width: 768px) { .track { margin-left: -18px; } .slide { padding-left: 18px; } .brand { flex-basis: 160px; } .product { flex-basis: 245px; } .wide { flex-basis: 370px; } .square { flex-basis: 235px; } .editorial { flex-basis: 380px; } .arrow { display: grid; } }
+@media (min-width: 1180px) { .brand { flex-basis: 16.666%; } .product { flex-basis: 25%; } .wide { flex-basis: 35%; } .square { flex-basis: 20%; } .editorial { flex-basis: 34%; } }

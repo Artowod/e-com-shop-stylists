@@ -1,0 +1,21 @@
+.purchase { margin-top: 24px; }
+.colors { padding: 0; border: 0; }
+.colors legend { margin-bottom: 10px; font-size: .82rem; }
+.colors div { display: flex; gap: 9px; }
+.colors button { width: 34px; height: 34px; border: 4px solid #fff; border-radius: 50%; outline: 1px solid #ccc; background: var(--swatch); }
+.colors button[aria-pressed="true"] { outline: 2px solid var(--color-ink); outline-offset: 2px; }
+.actions { display: grid; grid-template-columns: 120px 1fr; gap: 10px; margin-top: 24px; }
+.actions button { min-height: 54px; border: 2px solid var(--color-accent); border-radius: 8px; color: #fff; background: var(--color-accent); font-weight: 800; }
+.actions .secondary { color: var(--color-ink); border-color: var(--color-ink); background: transparent; }
+.actions p { grid-column: 1 / -1; min-height: 1.2em; margin: 0; color: #278557; font-size: 0.85rem; }
+.quantity { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid #bbb; border-radius: 8px; overflow: hidden; }
+.quantity button { min-height: 50px; padding: 0; color: var(--color-ink); border: 0; border-radius: 0; background: #fff; }
+.quantity button svg { width: 18px; height: 18px; margin: auto; }
+.quantity output { display: grid; place-items: center; }
+.installments { display: flex; align-items: center; gap: 8px; margin-top: 4px; padding: 10px 12px; color: #555; background: #f1efe9; font-size: .77rem; }
+.installments svg { width: 17px; height: 17px; flex: none; }
+.serviceRows { margin-top: 18px; border-top: 1px solid var(--color-line); }
+.serviceRows details { border-bottom: 1px solid var(--color-line); }
+.serviceRows summary { padding: 14px 2px; cursor: pointer; font-weight: 800; }
+.serviceRows p { margin: 0 0 15px; color: #666; font-size: .82rem; }
+@media (min-width: 600px) { .actions { grid-template-columns: 120px 1fr 1fr; } .actions p { grid-column: 1 / -1; } }

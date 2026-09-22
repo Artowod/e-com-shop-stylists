@@ -1,0 +1,7 @@
+.rating { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; color: #7b7b7b; font-size: 0.8rem; }
+.rating strong { color: var(--color-ink); }
+.stars { display: inline-flex; gap: 1px; color: #d1d1d1; letter-spacing: -0.04em; }
+.stars svg { width: 14px; height: 14px; }
+.stars .filled { color: #e5a200; }
+.compact { gap: 5px; font-size: 0.7rem; }
+.compact strong { display: none; }

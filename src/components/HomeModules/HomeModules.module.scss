@@ -1,0 +1,59 @@
+.section { padding-block: 58px; overflow: hidden; }
+.heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 26px; }
+.heading span { display: block; margin-bottom: 7px; color: var(--color-accent); font-size: .69rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.heading h2 { margin: 0; font-size: clamp(1.8rem, 5vw, 3.3rem); letter-spacing: -.05em; }
+.heading a { display: inline-flex; flex: none; align-items: center; gap: 6px; color: inherit; font-size: .82rem; font-weight: 800; }
+.heading a svg { width: 16px; height: 16px; }
+.brands { padding-bottom: 32px; background: #fff; }
+.brandCard { display: grid; min-height: 132px; grid-template-rows: 72px auto; place-items: center; gap: 8px; padding: 14px 12px; border: 1px solid var(--color-line); color: var(--color-ink); background: #fff; text-align: center; transition: border-color 160ms ease, transform 160ms ease; }
+.brandCard:hover, .brandCard:focus-visible { border-color: #aaa; transform: translateY(-2px); }
+.brandLogo { display: grid; width: 100%; height: 72px; place-items: center; border-radius: 8px; background: #fafafa; }
+.brandLogo img { width: 64px; height: 52px; object-fit: contain; }
+.brandCard strong { font-size: .78rem; line-height: 1.25; letter-spacing: -.02em; }
+.weekly { background: var(--color-surface); }
+.newProducts { background: #171717; color: #fff; }
+.newProducts .heading a, .newProducts .heading h2 { color: #fff; }
+.newCard { display: grid; min-height: 260px; grid-template-columns: 1fr 160px; align-items: center; padding: 26px; border: 1px solid #3e3e3e; color: #fff; background: linear-gradient(130deg, #272727, #111); overflow: hidden; }
+.newCard > div > span { display: inline-block; padding: 5px 8px; color: #111; background: #fff; font-size: .65rem; font-weight: 900; }
+.newCard strong { display: block; margin-top: 18px; color: #aaa; font-size: .7rem; text-transform: uppercase; }
+.newCard h3 { margin: 7px 0 20px; font-size: 1.08rem; line-height: 1.35; }
+.newCard img { width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 20px 24px rgb(0 0 0 / 40%)); }
+.sale { background: #fff3f0; }
+.sale .heading span { color: #b72e20; }
+.soon { background: #eceef0; }
+.soonCard { display: grid; min-height: 255px; grid-template-columns: 150px 1fr; align-items: center; gap: 16px; padding: 20px; background: #fff; }
+.soonCard img { width: 100%; height: auto; filter: saturate(.65); }
+.soonCard div > span { display: inline-block; margin-bottom: 12px; padding: 5px 7px; color: #fff; background: #5b43bf; font-size: .67rem; font-weight: 800; }
+.soonCard strong { display: block; color: #777; font-size: .7rem; text-transform: uppercase; }
+.soonCard h3 { margin: 7px 0 17px; font-size: .95rem; line-height: 1.35; }
+.soonCard a { color: var(--color-ink); font-size: .78rem; font-weight: 800; text-decoration: underline; }
+.instagram { background: #fff; }
+.moduleNote { max-width: 540px; margin: -12px 0 24px; color: #777; font-size: .78rem; }
+.instagramCard { position: relative; aspect-ratio: 1 / 1.15; overflow: hidden; background: var(--color-surface); }
+.instagramCard img { object-fit: contain; padding: 16px; transition: transform 200ms ease; }
+.instagramCard:hover img { transform: scale(1.05); }
+.instagramCard span { position: absolute; inset: auto 10px 10px; padding: 8px; color: #fff; background: rgb(0 0 0 / 72%); font-size: .72rem; font-weight: 800; }
+.reviews { background: #f7f5f1; }
+.reviewCard { min-height: 245px; padding: 28px; border: 1px solid #dedbd4; background: #fff; }
+.reviewCard blockquote { margin: 26px 0; font-size: 1.05rem; line-height: 1.6; }
+.reviewCard footer { display: flex; justify-content: space-between; color: #888; font-size: .75rem; }
+.reviewCard > a { display: block; margin-top: 22px; color: var(--color-ink); font-size: .74rem; text-decoration: underline; }
+.blog { background: #fff; }
+.blogCard { border: 1px solid var(--color-line); background: #fff; }
+.blogImage { position: relative; aspect-ratio: 16 / 8; background: var(--color-surface); overflow: hidden; }
+.blogImage img { object-fit: contain; padding: 12px; }
+.blogCard > span, .blogCard h3, .blogCard > a { margin-inline: 20px; }
+.blogCard > span { display: block; margin-top: 20px; color: var(--color-accent); font-size: .68rem; font-weight: 900; text-transform: uppercase; }
+.blogCard h3 { margin-top: 8px; font-size: 1.1rem; line-height: 1.35; }
+.blogCard > a { display: flex; width: fit-content; align-items: center; gap: 6px; margin-block: 25px; color: var(--color-ink); font-size: .78rem; font-weight: 800; }
+.blogCard > a svg { width: 15px; height: 15px; }
+.about { color: #fff; background: #171717; }
+.about .heading h2, .about .heading a { color: #fff; }
+.aboutCard { min-height: 235px; padding: 30px; border: 1px solid #3d3d3d; background: #202020; }
+.aboutCard > span { color: #e78272; font-size: .72rem; font-weight: 900; }
+.aboutCard h3 { margin: 45px 0 12px; font-size: 1.25rem; }
+.aboutCard p, .seoText { color: #aaa; line-height: 1.65; }
+.seoText { max-width: 900px; margin: 42px 0 0; font-size: .9rem; }
+@media (max-width: 640px) { .heading { align-items: start; } .heading a { margin-top: 12px; } .newCard { grid-template-columns: 1fr 120px; padding: 20px; } .soonCard { grid-template-columns: 110px 1fr; } }
+@media (min-width: 768px) { .section { padding-block: 82px; } }
+@media (prefers-reduced-motion: reduce) { .instagramCard img { transition: none; } .instagramCard:hover img { transform: none; } }

@@ -1,0 +1,10 @@
+.content { margin-top: 64px; border-top: 1px solid var(--color-line); }
+.content > article, .content > details { padding: 28px 0; border-bottom: 1px solid var(--color-line); }
+.content h2 { margin: 0 0 18px; font-size: 1.45rem; }
+.content p, .content li { color: #555; line-height: 1.7; }
+.content summary { cursor: pointer; font-size: 1.15rem; font-weight: 800; }
+.content details p, .content details ul { max-width: 850px; margin-top: 18px; }
+.characteristics dl { margin: 0; }
+.characteristics dl div { display: grid; grid-template-columns: minmax(130px, 1fr) 1.5fr; gap: 18px; padding: 11px 0; border-bottom: 1px solid #eee; }
+.characteristics dt { color: #777; }
+.characteristics dd { margin: 0; font-weight: 700; }

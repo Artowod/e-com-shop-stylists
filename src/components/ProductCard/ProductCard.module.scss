@@ -1,0 +1,52 @@
+.card {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+
+  &:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgb(0 0 0 / 8%); }
+}
+.utilities { position: absolute; top: 10px; right: 10px; z-index: 2; display: grid; gap: 5px; }
+.utilities button { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid var(--color-line); border-radius: 50%; color: var(--color-ink); background: rgb(255 255 255 / 92%); font-size: 1rem; }
+.utilities svg { width: 17px; height: 17px; }
+.utilities button[aria-pressed="true"] { color: #fff; border-color: var(--color-accent); background: var(--color-accent); }
+
+.imageLink {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  background: #f4f4f2;
+
+  img { object-fit: contain; padding: 18px; }
+}
+
+.badges { position: absolute; top: 10px; left: 10px; display: grid; gap: 5px; }
+.badges > span { width: fit-content; padding: 5px 7px; border-radius: 5px; color: #fff; font-size: 0.68rem; font-weight: 800; text-transform: uppercase; }
+.discount { background: var(--color-accent); }
+.new { background: #1f7a4f; }
+
+.content { padding: 12px; }
+.brand { color: #777; font-size: 0.74rem; font-weight: 700; text-transform: uppercase; }
+.content h3 { min-height: 2.8em; margin: 7px 0 9px; font-size: 0.9rem; line-height: 1.4; }
+.content h3 a { color: var(--color-ink); }
+.availability { display: block; margin-top: 8px; color: #278557; font-size: 0.72rem; }
+.priceRow { display: flex; align-items: end; justify-content: space-between; margin-top: 12px; }
+.priceRow strong { display: block; font-size: 1rem; }
+.priceRow del { display: block; color: #999; font-size: 0.72rem; }
+.priceRow button { width: 42px; height: 42px; border: 0; border-radius: 50%; color: #fff; background: var(--color-ink); font-size: 1.25rem; transition: background 160ms ease, transform 160ms ease; }
+.priceRow button svg { width: 20px; height: 20px; margin: auto; }
+.priceRow button:hover, .priceRow button:focus-visible { background: var(--color-accent); transform: scale(1.04); }
+
+@media (min-width: 768px) {
+  .content { padding: 16px; }
+  .content h3 { font-size: 1rem; }
+  .priceRow strong { font-size: 1.12rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .priceRow button { transition: none; }
+  .card:hover, .priceRow button:hover { transform: none; }
+}
