@@ -1,0 +1,87 @@
+.page {
+  padding-block: 28px 72px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #888;
+  font-size: 0.78rem;
+}
+
+.breadcrumbs a {
+  color: #555;
+}
+
+.hero {
+  margin: 28px 0 52px;
+  padding: clamp(28px, 7vw, 72px);
+  border-radius: 18px;
+  color: #fff;
+  background: linear-gradient(125deg, #171717 0%, #34201e 62%, #8f251b 100%);
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: #ffb9ae;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2.4rem, 8vw, 5.8rem);
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: 24px 0 0;
+  color: #f1e9e7;
+  line-height: 1.65;
+}
+
+.heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.heading h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  letter-spacing: -0.04em;
+}
+
+.heading span {
+  color: #777;
+}
+
+.empty {
+  padding: 64px 24px;
+  border-radius: 14px;
+  background: var(--color-surface);
+  text-align: center;
+}
+
+.empty h2 {
+  margin-top: 0;
+}
+
+.empty p {
+  margin-bottom: 24px;
+  color: #666;
+}
+
+.empty a {
+  color: var(--color-accent);
+  font-weight: 800;
+}

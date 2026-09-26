@@ -1,0 +1,195 @@
+.filterColumn {
+  min-width: 0;
+}
+
+.mobileTrigger {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 9px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--color-ink);
+  font-weight: 800;
+}
+
+.mobileTrigger svg {
+  width: 18px;
+  height: 18px;
+}
+
+.mobileTrigger span {
+  display: grid;
+  min-width: 21px;
+  height: 21px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-ink);
+  background: #fff;
+  font-size: 0.7rem;
+}
+
+.desktopPanel {
+  display: none;
+}
+
+.desktopPanel h2,
+.dialogHeader h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.form fieldset {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 22px 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.form legend {
+  margin-bottom: 13px;
+  font-weight: 800;
+}
+
+.form fieldset > label {
+  display: flex;
+  min-height: 30px;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.form input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-ink);
+}
+
+.form small {
+  margin-left: auto;
+  color: #888;
+}
+
+.range {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.range label {
+  display: grid;
+  gap: 6px;
+  color: #777;
+  font-size: 0.72rem;
+}
+
+.range input {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  color: var(--color-ink);
+  background: #fff;
+}
+
+.swatch {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  background: var(--filter-color);
+}
+
+.actions {
+  display: grid;
+  gap: 11px;
+  padding-top: 22px;
+}
+
+.actions button {
+  min-height: 46px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--color-ink);
+  font-weight: 800;
+}
+
+.actions a {
+  padding: 8px;
+  color: #666;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.dialog {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.dialog::backdrop {
+  background: rgb(0 0 0 / 55%);
+}
+
+.dialogPanel {
+  width: min(92vw, 420px);
+  min-height: 100%;
+  margin-left: auto;
+  padding: 22px;
+  background: #fff;
+  overflow-y: auto;
+}
+
+.dialogHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 10px;
+}
+
+.dialogHeader button {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  background: #fff;
+}
+
+@media (min-width: 1024px) {
+  .mobileTrigger,
+  .dialog {
+    display: none;
+  }
+
+  .desktopPanel {
+    display: block;
+    position: sticky;
+    top: 20px;
+    padding: 22px;
+    border-radius: 12px;
+    background: var(--color-surface);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialog {
+    scroll-behavior: auto;
+  }
+}

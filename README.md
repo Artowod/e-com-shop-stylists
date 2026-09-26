@@ -4,7 +4,7 @@ Next.js App Router storefront for professional hairdresser, barber and stylist p
 
 ## Local setup
 
-1. Use Node.js 20.19 or newer.
+1. Use Node.js 22.20 or newer (`nvm use` when NVM is installed).
 2. Copy `.env.example` to `.env.local` and provide the required credentials.
 3. Run `npm install`.
 4. Run `npm run db:generate`, `npm run db:migrate`, then `npm run db:seed` after configuring Neon.

@@ -8,3 +8,4 @@ coverage
 .DS_Store
 ECOMMERCE_TECH_SPEC_*.*
 AGENTS.md
+.neon

@@ -1,0 +1,38 @@
+.switcher {
+  display: flex;
+  flex: 0 0 auto;
+  padding: 2px;
+  border: 1px solid #d7d7d7;
+  border-radius: 999px;
+  background: #fff;
+
+  button {
+    min-width: 34px;
+    min-height: 34px;
+    padding: 0 8px;
+    border: 0;
+    border-radius: 999px;
+    color: #686868;
+    background: transparent;
+    font: inherit;
+    font-size: 0.7rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: color 160ms ease, background 160ms ease;
+
+    &:hover, &:focus-visible { color: var(--color-ink); }
+  }
+
+  .active {
+    color: #fff;
+    background: var(--color-ink);
+  }
+}
+
+@media (max-width: 576px) {
+  .switcher button { min-width: 32px; min-height: 32px; padding-inline: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .switcher button { transition: none; }
+}

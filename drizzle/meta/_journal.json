@@ -15,6 +15,20 @@
       "when": 1789985179234,
       "tag": "0001_cuddly_jimmy_woo",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790443973359,
+      "tag": "0002_even_gorilla_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1790445245527,
+      "tag": "0003_true_gargoyle",
+      "breakpoints": true
     }
   ]
 }

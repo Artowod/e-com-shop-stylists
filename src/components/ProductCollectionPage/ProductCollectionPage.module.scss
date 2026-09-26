@@ -1,0 +1,48 @@
+.page {
+  padding-block: 28px 72px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #888;
+  font-size: 0.78rem;
+}
+
+.breadcrumbs a {
+  color: #555;
+}
+
+.header {
+  max-width: 880px;
+  padding-block: clamp(42px, 8vw, 84px);
+}
+
+.header > span {
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  margin: 12px 0 20px;
+  font-size: clamp(2.5rem, 8vw, 5.8rem);
+  letter-spacing: -0.06em;
+  line-height: 0.96;
+}
+
+.header p {
+  max-width: 680px;
+  margin: 0;
+  color: #666;
+  line-height: 1.7;
+}
+
+.count {
+  margin-bottom: 22px;
+  color: #777;
+  font-size: 0.82rem;
+}

@@ -1,7 +1,21 @@
+import { neon } from "@neondatabase/serverless";
+import { drizzle } from "drizzle-orm/neon-http";
+
 import { catalogCategories } from "@/data/catalogSeed";
 import { categoryBrandSeed } from "@/data/brandSeed";
-import { getDatabase } from "./index";
+import { messages } from "@/i18n/messages";
+import * as schema from "./schema";
 import { brands, categories, categoryBrands } from "./schema";
+
+function getSeedDatabase() {
+  const databaseUrl = process.env.DATABASE_URL;
+
+  if (!databaseUrl) {
+    throw new Error("DATABASE_URL is not configured.");
+  }
+
+  return drizzle(neon(databaseUrl), { schema });
+}
 
 function toBrandSlug(name: string) {
   return name
@@ -14,8 +28,13 @@ function toBrandSlug(name: string) {
 }
 
 async function seed() {
-  const db = getDatabase();
-  await db.insert(categories).values(catalogCategories.map(({ name, slug }, sortOrder) => ({ name, slug, sortOrder }))).onConflictDoNothing();
+  const db = getSeedDatabase();
+  await db.insert(categories).values(catalogCategories.map(({ name, nameId, slug }, sortOrder) => ({
+    nameUa: name,
+    nameEn: messages.en[nameId],
+    slug,
+    sortOrder,
+  }))).onConflictDoNothing();
 
   const brandNames = [...new Set(Object.values(categoryBrandSeed).flat())];
   await db.insert(brands).values(brandNames.map((name) => ({ name, slug: toBrandSlug(name) }))).onConflictDoNothing();
